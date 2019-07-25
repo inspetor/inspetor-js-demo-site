@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+ <head>
+   <title>Inspetor JS - Test</title>
+   <script src="https://inspetor-static-js.s3-sa-east-1.amazonaws.com/prod/inspetor-js/1.0.7/inspetor.min.js"></script>
+   <script>
+      inspetor.sharedInstance().setup("123", "inspetor.js.demo-site", false, true);
+   </script>
+   <style>
+      body {
+        margin: auto;
+        text-align: center;
+      }
+      button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1%;
+      }
+      h1   {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <script>
+      function trackAll() {
+        inspetor.sharedInstance().trackLogin('123');
+        inspetor.sharedInstance().trackLogout('123');
+        inspetor.sharedInstance().trackAccountCreation('123');
+        inspetor.sharedInstance().trackAccountUpdate('123');
+        inspetor.sharedInstance().trackAccountDeletion('123');
+        inspetor.sharedInstance().trackPasswordRecovery('email@recovery.com');
+        inspetor.sharedInstance().trackPasswordReset('email@reset.com');
+        inspetor.sharedInstance().trackItemTransferCreation('123');
+        inspetor.sharedInstance().trackItemTransferUpdate('123');
+        inspetor.sharedInstance().trackEventCreation('123');
+        inspetor.sharedInstance().trackEventUpdate('123');
+        inspetor.sharedInstance().trackEventDeletion('123');
+        inspetor.sharedInstance().trackSaleCreation('123');
+        inspetor.sharedInstance().trackSaleUpdate('123');
+        console.log("All trackers were called");
+      }
+    </script>
+ </head>
+ <body>
+    <br>
+    <img src="https://inspetor-assets.s3-sa-east-1.amazonaws.com/images/inspetor-logo.png" width="200" height="40" alt="Inspetor Logo">
+    <h1>Inspetor Javascript Integration Test</h1>
+    <div>
+      <button onclick="inspetor.sharedInstance().trackLogin('123');">TrackLogin</button>
+      <button onclick="inspetor.sharedInstance().trackLogout('123');">TrackLogout</button>
+      <button onclick="inspetor.sharedInstance().trackAccountCreation('123');">TrackAccountCreation</button>
+      <button onclick="inspetor.sharedInstance().trackAccountUpdate('123');">TrackAccountUpdate</button>
+      <button onclick="inspetor.sharedInstance().trackAccountDeletion('123');">TrackAccountDeletion</button>
+      <button onclick="inspetor.sharedInstance().trackPasswordRecovery('email@recovery.com');">TrackPasswordRecovery</button>
+      <button onclick="inspetor.sharedInstance().trackPasswordReset('email@reset.com');">TrackPasswordReset</button>
+      <button onclick="inspetor.sharedInstance().trackItemTransferCreation('123');">TrackItemTransferCreation</button>
+      <button onclick="inspetor.sharedInstance().trackItemTransferUpdate('123');">TrackItemTransferUpdate</button>
+      <button onclick="inspetor.sharedInstance().trackEventCreation('123');">TrackEventCreation</button>
+      <button onclick="inspetor.sharedInstance().trackEventUpdate('123');">TrackEventUpdate</button>
+      <button onclick="inspetor.sharedInstance().trackEventDeletion('123');">TrackEventDeletion</button>
+      <button onclick="inspetor.sharedInstance().trackSaleCreation('123');">TrackSaleCreation</button>
+      <button onclick="inspetor.sharedInstance().trackSaleUpdate('123');">TrackSaleUpdate</button>
+      <br>
+      <button onclick="trackAll();">Track all actions</button>
+    </div>
+ </body>
+</html>

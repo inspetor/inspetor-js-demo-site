@@ -1,0 +1,15 @@
+{
+  "name": "inspetor-js-demo-site",
+  "version": "1.0.0",
+  "description": "The website to test the Inspetor Javascript Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Inspetor Dev Team",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^16.3.0",
+    "inspetor": "^1.0.3"
+  }
+}
