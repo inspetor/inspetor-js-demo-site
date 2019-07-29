@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "browserify": "^16.3.0",
-    "inspetor": "^1.0.3"
+    "inspetor-js": "^1.0.2"
   }
 }

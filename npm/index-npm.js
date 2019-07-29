@@ -1,4 +1,4 @@
-var inspetor = require("inspetor");
+var inspetor = require("../node_modules/inspetor-js/inspetor.min.js");
 
 inspetor.sharedInstance().setup("123", "inspetor.js.demo-npm", false, true);
 
